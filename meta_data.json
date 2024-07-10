@@ -1,0 +1,12 @@
+{
+    "categories": {
+        "0": "social network",
+        "1": "analytics"
+    },
+    "description": "Use a API do Facebook para obter interesses de sugestões e melhorar o direcionamento de seus anúncios do Facebook Ads.\n\nATENÇÃO - Para usar esse plugin, assista o vídeo abaixo com as instruções:\nhttps://youtu.be/FljJyZxwY6s",
+    "image": "//s3.amazonaws.com/appforest_uf/f1593442781759x273903594839260500/original%5B1%5D.png",
+    "license": "open_source",
+    "link": "https://developers.facebook.com/docs/marketing-api/audiences/reference/targeting-search/#interests",
+    "name": "Facebook Ads - API Interesses",
+    "sa_node_version": 18
+}

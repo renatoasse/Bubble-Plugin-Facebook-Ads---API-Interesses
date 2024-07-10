@@ -1,0 +1,70 @@
+{
+    "add_to_header": true,
+    "auth": "oauth2_user",
+    "authentication_url": "https://www.facebook.com/v20.0/dialog/oauth",
+    "calls": {
+        "AAC": {
+            "doc_link": "https://developers.facebook.com/docs/marketing-api/audiences/reference/targeting-search/#interests",
+            "initialized": true,
+            "method": "get",
+            "name": "FB - Get Interests",
+            "publish_as": "data",
+            "rank": 0,
+            "ret_value": "api.1593437521329x993993487656419300.plugin_api.AAC",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAC\":{\"caption\":\"FB - Get Interest\",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1593437521329x993993487656419300.plugin_api.AAC.data\",\"caption\":\"data\",\"path\":[\"data\"]}}},\"plugin_api.AAC.data\":{\"caption\":\"FB - Get Interests data\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"6003127206524\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Marketing digital\",\"path\":[\"name\"]},\"_p_audience_size_lower_bound\":{\"ret_value\":\"number\",\"caption\":\"audience_size_lower_bound\",\"sample_value\":149444939,\"path\":[\"audience_size_lower_bound\"]},\"_p_audience_size_upper_bound\":{\"ret_value\":\"number\",\"caption\":\"audience_size_upper_bound\",\"sample_value\":175747249,\"path\":[\"audience_size_upper_bound\"]},\"_p_path\":{\"ret_value\":\"list.text\",\"caption\":\"path\",\"sample_value\":\"Interesses\",\"path\":[\"path\"]},\"_p_description\":{\"ret_value\":\"text\",\"caption\":\"description\",\"sample_value\":\"\",\"path\":[\"description\"]},\"_p_topic\":{\"ret_value\":\"text\",\"caption\":\"topic\",\"sample_value\":\"Business and industry\",\"path\":[\"topic\"]},\"_p_disambiguation_category\":{\"ret_value\":\"text\",\"caption\":\"disambiguation_category\",\"sample_value\":\"Escola especializada\",\"path\":[\"disambiguation_category\"]}}}}",
+            "url": "https://graph.facebook.com/search?type=adinterest&q=[interest]&limit=500&locale=pt_BR]",
+            "url_params": {
+                "AAJ": {
+                    "doc": "Insira o interesse que você está buscando.\nExemplos:\nGolfe\nMarketing\nMarketing Digital",
+                    "key": "interest",
+                    "private": true,
+                    "value": "Digital Marketing"
+                }
+            }
+        },
+        "AAK": {
+            "doc_link": "https://developers.facebook.com/docs/marketing-api/audiences/reference/targeting-search/#interest_suggestions",
+            "initialized": true,
+            "method": "get",
+            "name": "FB - Get Interest Suggestions",
+            "publish_as": "data",
+            "rank": 1,
+            "ret_value": "api.1593437521329x993993487656419300.plugin_api.AAK",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAK\":{\"caption\":\"FB - Get Interest Suggestion\",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1593437521329x993993487656419300.plugin_api.AAK.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_paging.cursors.before\":{\"ret_value\":\"text\",\"caption\":\"paging cursors before\",\"sample_value\":\"NjAwMzI3OTU5ODgyMwZDZD\",\"path\":[\"paging\",\"cursors\",\"before\"]},\"_p_paging.cursors.after\":{\"ret_value\":\"text\",\"caption\":\"paging cursors after\",\"sample_value\":\"NjAwMzEyMDczOTIxNwZDZD\",\"path\":[\"paging\",\"cursors\",\"after\"]}}},\"plugin_api.AAK.data\":{\"caption\":\"FB - Get Interest Suggestions data\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"6003279598823\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Marketing\",\"path\":[\"name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":null,\"path\":[\"type\"]},\"_p_path\":{\"ret_value\":\"list.text\",\"caption\":\"path\",\"sample_value\":\"Interesses\",\"path\":[\"path\"]},\"_p_description\":{\"ret_value\":\"text\",\"caption\":\"description\",\"sample_value\":null,\"path\":[\"description\"]},\"_p_source\":{\"ret_value\":\"text\",\"caption\":\"source\",\"sample_value\":null,\"path\":[\"source\"]},\"_p_partner\":{\"ret_value\":\"text\",\"caption\":\"partner\",\"sample_value\":null,\"path\":[\"partner\"]},\"_p_audience_size\":{\"ret_value\":\"number\",\"caption\":\"audience_size\",\"sample_value\":712060990,\"path\":[\"audience_size\"]},\"_p_country\":{\"ret_value\":\"text\",\"caption\":\"country\",\"sample_value\":null,\"path\":[\"country\"]},\"_p_country_access\":{\"ret_value\":\"text\",\"caption\":\"country_access\",\"sample_value\":null,\"path\":[\"country_access\"]},\"_p_topic\":{\"ret_value\":\"text\",\"caption\":\"topic\",\"sample_value\":null,\"path\":[\"topic\"]}}}}",
+            "url": "https://graph.facebook.com/search?type=adinterestsuggestion&interest_list=[Interest]&limit=45&after=[afterid]",
+            "url_params": {
+                "AAM": {
+                    "doc": "Use esse campo para fazer paginação dos resultados.",
+                    "key": "afterid",
+                    "private": true,
+                    "value": ""
+                },
+                "AAa": {
+                    "doc": "Insira os interesses entre aspas, com um colchete ao início e outro no fim. Se for uma lista, separe com vírgulas.\n\nExemplos:\nPARA UM INTERESSE: [\"Golfe\"]\nPARA UMA LISTA DE INTERESSES: [\"Golfe\", \"Tenis\"]",
+                    "key": "Interest",
+                    "private": true,
+                    "value": "[\"Marketing\"] "
+                }
+            }
+        },
+        "AAb": {
+            "doc_link": "https://developers.facebook.com/docs/graph-api/reference/profile/#profile---profile-id-",
+            "initialized": true,
+            "method": "get",
+            "name": "Check Profile",
+            "publish_as": "data",
+            "rank": 2,
+            "ret_value": "api.1593437521329x993993487656419300.plugin_api.AAb",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAb\":{\"caption\":\"Check Profile\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"name\",\"path\":[\"name\"]}}}}",
+            "url": "https://graph.facebook.com/v20.0/me?fields=id,name"
+        }
+    },
+    "generate_token_from_code_uri": "https://graph.facebook.com/v20.0/oauth/access_token",
+    "human": "Facebook Interests",
+    "oauth_user_data_call": "https://graph.facebook.com/v20.0/me",
+    "scope": "public_profile",
+    "token_param_name": "Authorization: Bearer"
+}
